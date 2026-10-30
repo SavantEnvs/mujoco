@@ -1,0 +1,9 @@
+project: savantenvs/mujoco
+target: fuzz_obj
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_obj/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_obj
+    libfuzzer: true
+    timeout: 30
